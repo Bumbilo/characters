@@ -1,0 +1,19 @@
+<div class="title-block">
+  <h3 class="title">
+    Characters list<span class="sparkline bar"></span>
+  </h3>
+</div>
+<section class="section">
+  <div class="row">
+    <div class="col-md-12">
+      <app-character-filter
+        (filterApply)="handleFilterApply($event)"
+        (filterCancel)="handleFilterCancel()"
+        (sortByName)="handleSortByName()"
+      ></app-character-filter>
+      <div *ngFor="let character of filteredCharacters ">
+        <app-character-card [character]="character"></app-character-card>
+      </div>
+    </div>
+  </div>
+</section>

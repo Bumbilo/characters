@@ -1,0 +1,24 @@
+<div class="col-md-12">
+  <div class="card stats">
+    <div class="card-block">
+      <div class="table-responsive">
+        <table class="table">
+          <caption>Episodes</caption>
+          <thead>
+          <tr>
+            <th *ngFor="let head of titles" scope="col">{{ head.title }}</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let scene of episodes; index as i">
+            <th scope="row">{{i}}</th>
+            <td>{{scene.episode}}</td>
+            <td>{{scene.name}}</td>
+            <td>{{scene.air_date}}</td>
+            <td>{{scene.created | date:'longDate'}}</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>

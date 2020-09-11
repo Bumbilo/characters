@@ -1,0 +1,68 @@
+<section class="section">
+  <div class="col col-xs-12 col-sm-12 col-md-12 col-xl-12 stats-col">
+    <div class="card stats">
+      <div class="card-block">
+        <div class="row character-filter">
+          <div class="col-md-3">
+            <input
+              type="text"
+              class="form-control underlined"
+              id="name"
+              [(ngModel)]="selectedName"
+              placeholder="Enter name"
+            />
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label class="control-label">Gender:</label>
+              <div>
+                <label *ngFor="let genderItem of genderList">
+                  <input
+                    class="checkbox"
+                    type="checkbox"
+                    [value]="genderItem.gender"
+                    (change)="handleChangeGender($event)"
+                  >
+                  <span>{{genderItem.gender}}</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label class="control-label">Status:</label>
+              <div>
+                <label *ngFor="let statusItem of statusList">
+                  <input
+                    class="checkbox"
+                    type="checkbox"
+                    [value]="statusItem.status"
+                    (change)="handleChangeStatus($event)"
+                  >
+                  <span>{{statusItem.status}}</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-2">
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-secondary" (click)="applyFilter()">Apply</button>
+              <button type="button" class="btn btn-secondary" (click)="clearFilter()">Clear</button>
+            </div>
+          </div>
+
+          <div class="col-md-1">
+            <button
+              type="button"
+              class="btn btn-outline-dark"
+              (click)="handleSortByName()"
+            >
+              <i class="fa fa-sort" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

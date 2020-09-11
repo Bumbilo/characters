@@ -1,0 +1,42 @@
+<div class="col-md-12" *ngIf="character">
+  <div class="card stats">
+    <div class="card-block">
+      <div class="row stats-container">
+        <div class="card col-xs-12">
+          <div class="row no-gutters">
+            <div class="col-xs-3 col-md-3 col-sm-12">
+              <img src="{{character.image}}" class="card-img" alt="{{character.name}}">
+              <a [routerLink]="['/list']" class="btn btn-info btn-block">Back</a>
+            </div>
+            <div class="col-xs-9 col-md-9 col-sm-12">
+              <div class="card-body">
+                <h5 class="card-title"> <span class="card-field">{{character.name}}</span>></h5>
+                <div class="col-xs-12 stat-col">
+                  Id: <span class="card-field">{{character.id}}</span>
+                </div>
+                <div class="col-xs-12 stat-col chard-field">
+                  Created : <span class="card-field">{{character.created}}</span>
+                </div>
+                <div class="col-xs-12 stat-col chard-field">
+                  Gender: <span class="card-field">{{character.gender}}</span>
+                </div>
+                <div class="col-xs-12 stat-col chard-field">
+                  Location: <span class="card-field">{{character.location.name}}</span>
+                </div>
+                <div class="col-xs-12 stat-col chard-field">
+                  Species: <span class="card-field">{{character.species}}</span>
+                </div>
+                <div class="col-xs-12 stat-col chard-field">
+                  Status: <span class="card-field">{{character.status}}</span>
+                </div>
+                <div class="col-xs-12 stat-col chard-field">
+                  Origin: <span class="card-field">{{character.origin.name}}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
