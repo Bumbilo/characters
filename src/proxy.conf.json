@@ -1,0 +1,7 @@
+{
+  "/api/*": {
+    "target": "https://gbngq2s2e0.execute-api.eu-west-2.amazonaws.com/api/characters",
+    "secure": false,
+    "logLevel": "debug"
+  }
+}

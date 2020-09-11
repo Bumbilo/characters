@@ -1,3 +1,23 @@
+## Start project
+Requirements:
+* Node.js v12
+* Angular CLI v10
+
+### Install dependency
+`npm i`
+___
+### Start server
+`ng serve`
+___
+### Run test
+`ng test`
+___
+
+### Run server 
+
+`node src/server/app.js`
+___
+
 # CharactersApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.0.

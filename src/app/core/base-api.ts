@@ -11,10 +11,6 @@ export class BaseApi {
   private headers = new HttpHeaders();
 
   constructor(public http: HttpClient) {
-    // this.headers.append('Content-Type', 'application/json');
-    // this.headers.append('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-    // this.headers.append('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
-    // this.headers.set('Access-Control-Allow-Origin', '*');
   }
 
   private getUrl(url: string): string {
